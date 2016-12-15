@@ -50,20 +50,10 @@ public class j_2
 
     private Double getTFIDFScore(String token, Map<String, Double> idf)
     {
-//        Double score = 0.0;
-        if (idf.get(token) != 0.0)
+        if (idf.get(token) != null)
             return idf.get(token);
         else
             return 0.0;
-//        for (Map.Entry entry : idf.entrySet())
-//        {
-//            if (token.equals(entry.getKey()))
-//            {
-//                score = (Double) entry.getValue();
-//                break;
-//            }
-//        }
-//        return score;
     }
 
     public Map<String,Double> getIDF() throws Exception
